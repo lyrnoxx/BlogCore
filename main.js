@@ -1,30 +1,20 @@
 let library=[];
 
-function book(t,a,p,r){
-    this.t=t
-    this.a=a
-    this.p=p
-    this.r=r
+function book(name,author){
+    this.name=name
+    this.author=author
     this.info=function(){
-        return `${t+' '+a+' '+p+' '+r}`
+        return name+author
     }
 }
-function addBookToLibrary(){
-    const hobbit=new book('adww','wdaw','dawd','wdaaw')
-    const bladd=new book('adw','dawdaw','dawd','dawd')
-    library.push(hobbit);  
-    library.push(bladd);
+
+const hob=new book('awdawd','adwdaw');
+
+function addToLibrary(){
+    library.push(hob);    
 }
 
-let y=addBookToLibrary();
+addToLibrary();
 console.table(library)
-const card=document.querySelector('#card')
-card.textContent=library[0];
-function displayData(){
-    for (let i = 0; i < library.length; i++) {
-        card.textContent=library[i]
-        
-    }
-}
 
-let x=displayData();
+const card=document.querySelector('.card');
