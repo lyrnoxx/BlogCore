@@ -11,13 +11,13 @@
 <body> 
     <div id='header'></div>
     <div id='container'>
-        <div id='form'>
-            <form>
+        <div>
+            <form id="form" action="/main.js">
                 <label for='bname'>name</label>
                 <input type="text" id='bname'>
                 <label for="author">author</label>
                 <input type="text" id='author'>
-                <input type="submit" value="submit">
+                <button type="submit" form="form" id='submitBtn'>submit</button>
             </form>
         </div>        
         <div id='cards'>
